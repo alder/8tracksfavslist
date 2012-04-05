@@ -1,5 +1,5 @@
 // 2012-04-05
-// version 0.1
+// version 0.2
 // author - Alder (aleksey.derkach@gmail.com)
 // ==UserScript==
 // @name 8tracks favorite tracks list
