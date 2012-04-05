@@ -6,7 +6,7 @@
 // @namespace 8tracksfavslist
 // @description Show textarea with list of all your 8tracks.com favorite tracks. Ready to copy song names to clipboard.
 // @include http://8tracks.com/users/*/favorite_tracks
-// @include http://8tracks.com/users/*/favorite_tracks#
+// @include http://8tracks.com/users/*/favorite_tracks*
 // @require https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js
 // ==/UserScript==
 
