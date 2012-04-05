@@ -11,9 +11,9 @@
 // ==/UserScript==
 
 // a function that loads jQuery and calls a callback function when jQuery has finished loading
-function addJQuery(callback) {
+function addCode(callback) {
   var script = document.createElement("script");
-  script.setAttribute("src", "http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js");
+  script.setAttribute("src", "https://raw.github.com/alder/8tracksfavslist/master/8tracksfavslist.js");
   script.addEventListener('load', function() {
     var script = document.createElement("script");
     script.textContent = "(" + callback.toString() + ")();";
@@ -22,25 +22,5 @@ function addJQuery(callback) {
   document.body.appendChild(script);
 }
 
-// the guts of this userscript
-function main() {
-  $('.user_about').append('<a href="#" id="showfavslist" style="cursor: pointer;">Show favorites songs list</div>');
-  $('.user_about').append('<textarea rows="20" cols="40" id="favslist" name="favslist" style="display: none;"></textarea>');
-  $('#showfavslist').click(function() {
-  if ($('#showfavslist').text() == 'Show favorites songs list') {
-      $('#showfavslist').text('Hide favorites songs list');
-      $('#favslist').show();
-      $('li.fav_track').each(function (index, item) {
-                    var songname = $(item).find('div.track_info span.a a').text() + " - " + $(item).find('div.track_info span.t a').text() + "\n";
-                    $('#favslist').val($('#favslist').val() + songname); 
-                });
-  }
-  else {
-      $('#showfavslist').text('Show favorites songs list');
-      $('#favslist').hide();
-  };
-  });
-}
-
-// load jQuery and execute the main function
-addJQuery(main);
+// load current version of js fron Github
+addCode();
