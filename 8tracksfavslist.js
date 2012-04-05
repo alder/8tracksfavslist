@@ -6,7 +6,9 @@ function run_favs_getter () {
       $('#showfavslist').text('Hide favorites songs list');
       $('#favslist').show();
       $('li.fav_track').each(function (index, item) {
-                    var songname = $(item).find('div.track_info span.a a').text() + " - " + $(item).find('div.track_info span.t a').text() + "\n";
+                    var title = $(item).find('div.track_info span.t a').text();
+                    if (title == '') title = $(item).find('div.track_info span.t').text()
+                    var songname = $(item).find('div.track_info span.a a').text() + " - " + title + "\n";
                     $('#favslist').val($('#favslist').val() + songname); 
                 });
   }
