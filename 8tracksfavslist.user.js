@@ -10,8 +10,8 @@
 // @require https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js
 // ==/UserScript==
 
-// a function that loads jQuery and calls a callback function when jQuery has finished loading
-function addCode(callback) {
+// a function that loads remote js-code
+function addCode() {
   var script = document.createElement("script");
   script.setAttribute("src", "https://raw.github.com/alder/8tracksfavslist/master/8tracksfavslist.js");
   script.addEventListener('load', function() {
