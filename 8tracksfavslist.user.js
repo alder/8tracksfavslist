@@ -14,11 +14,6 @@
 function addCode() {
   var script = document.createElement("script");
   script.setAttribute("src", "https://raw.github.com/alder/8tracksfavslist/master/8tracksfavslist.js");
-  script.addEventListener('load', function() {
-    var script = document.createElement("script");
-    script.textContent = "(" + callback.toString() + ")();";
-    document.body.appendChild(script);
-  }, false);
   document.body.appendChild(script);
 }
 
